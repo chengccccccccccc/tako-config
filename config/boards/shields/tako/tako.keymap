@@ -157,15 +157,15 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│  MUTE    │  PAUSE   │  PREV    │          │          │   │   F1     │   F2     │   F3     │   F4     │  BT_1    │
-                  &kp C_MUTE &kp C_PAUSE &kp C_PREV &trans     &trans         &kp F1     &kp F2     &kp F3     &kp F4   &bt BT_SEL 0
+                  &kp C_MUTE &kp C_PAUSE &kp C_PREV &trans     &trans         &kp F1     &kp F2     &kp F3     &kp F4   &bt BT_SEL 
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│ VOL UP   │  PLAY    │  NEXT    │          │          │   │   F5     │   F6     │   F7     │   F8     │  BT_2    │
-                  &kp C_VOL_UP &kp C_PLAY &kp C_NEXT &trans     &trans         &kp F5     &kp F6     &kp F7     &kp F8  &bt BT_SEL 1
+                  &kp C_VOL_UP &kp C_PLAY &kp C_NEXT &trans     &trans         &kp F5     &kp F6     &kp F7     &kp F8  &bt BT_NXT
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│ VOL DOWN │          │          │          │          │   │   F9     │  F10     │  F11     │  F12     │  BT_3    │
-                  &kp C_VOL_DN &trans     &trans     &trans     &trans         &kp F9     &kp F10    &kp F11    &kp F12   &bt BT_SEL 2
+                  &kp C_VOL_DN &trans     &trans     &trans     &trans         &kp F9     &kp F10    &kp F11    &kp F12   &bt BT_PRV
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                    &trans     &kp FN          &bt BT_CLR    &to 1
+                                                    &trans    &bt BT_CLR_ALL  &kp F19        &to 1
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
