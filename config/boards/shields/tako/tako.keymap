@@ -159,11 +159,11 @@
                 //│  MUTE    │  PAUSE   │  PREV    │          │          │   │   F1     │   F2     │   F3     │   F4     │  BT_1    │
                   &kp C_MUTE &kp C_PAUSE &kp C_PREV &trans     &trans         &kp F1     &kp F2     &kp F3     &kp F4   &bt BT_SEL 0
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │  PLAY    │  NEXT    │          │          │   │   F5     │   F6     │   F7     │   F8     │  BT_2    │
+                //│ VOL UP   │  PLAY    │  NEXT    │          │          │   │   F5     │   F6     │   F7     │   F8     │  BT_2    │
                   &kp C_VOL_UP &kp C_PLAY &kp C_NEXT &trans     &trans         &kp F5     &kp F6     &kp F7     &kp F8  &bt BT_SEL 1
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│          │          │          │          │          │   │   F9     │  F10     │  F11     │  F12     │  BT_3    │
-                    &kp C_VOL_DOWN     &trans     &trans     &trans     &trans         &kp F9     &kp F10    &kp F11    &kp F12   &bt BT_SEL 2
+                //│ VOL DOWN │          │          │          │          │   │   F9     │  F10     │  F11     │  F12     │  BT_3    │
+                  &kp C_VOL_DN &trans     &trans     &trans     &trans         &kp F9     &kp F10    &kp F11    &kp F12   &bt BT_SEL 2
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                     &trans     &kp FN          &bt BT_CLR    &to 1
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
