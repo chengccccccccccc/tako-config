@@ -31,3 +31,12 @@
 &i2c1 {
   status = "disabled";
 };
+
+&pin_controller {
+  uart0_sleep: uart0_sleep {
+    compatible = "nordic,nrf-uart";
+    #binding-cells = <2>;  // 或者适当的数值
+    // 其他必要的属性
+  };
+};
+
