@@ -29,15 +29,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hs: homerow_shifts {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFTS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
         td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
@@ -49,36 +40,37 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_3 {
-            timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&to 3>;
-            layers = <0>;
-        };
-        combo_1 {
-            timeout-ms = <50>;
-            key-positions = <30 33>;
-            bindings = <&to 1>;
-        };
-        combo_1_high {
-            timeout-ms = <50>;
-            key-positions = <24 25>;
-            bindings = <&to 1>;
-        };
-        combo_ent {
-            timeout-ms = <50>;
-	    key-positions = <27 28>;
-            bindings = <&kp RET>;
-        };
-        combo_del {
-            timeout-ms = <50>;
-	    key-positions = <22 23>;
-            bindings = <&kp DEL>;
-            layers = <3>;
-        };
-    };
+    /*
+     * combos {
+     *     compatible = "zmk,combos";
+     *     combo_3 {
+     *         timeout-ms = <50>;
+     *         key-positions = <32 33>;
+     *         bindings = <&to 3>;
+     *         layers = <2>;
+     *     };
+     *     combo_1 {
+     *         timeout-ms = <50>;
+     *         key-positions = <30 33>;
+     *         bindings = <&to 1>;
+     *         layers = <2>;
+     *     };
+     *     combo_ent {
+     *         timeout-ms = <50>;
+	 *         key-positions = <27 28>;
+     *         bindings = <&kp RET>;
+     *         layers = <2>;
+     *     };
+     *     combo_del {
+     *         timeout-ms = <50>;
+	 *     key-positions = <22 23>;
+     *         bindings = <&kp DEL>;
+     *         layers = <2>;
+     *     };
+     * };
+     */
+
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -95,7 +87,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
                     &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                     &mt LC(LS(LA(LGUI))) SPC  &hs LSHIFT    &hm RCTL   &to 1
+                                     &mt LC(LS(LA(LGUI))) SPC  &sk LSHIFT    &sk RCTL   &to 1
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -109,10 +101,10 @@
                 //│  trans   │  trans   │  trans   │  trans   │  UNDER   │   │   DOT    │    4     │    5     │    6     │  ENTER   │
                    &trans     &trans     &trans     &trans     &kp UNDER      &kp DOT    &kp N4     &kp N5     &kp N6     &kp ENTER
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│  trans   │  trans   │  trans   │  trans   │   DOT    │   │    0     │    1     │    2     │    3     │   to 2   │
-                   &trans     &trans     &trans     &trans     &kp DOT        &kp N0     &kp N1     &kp N2     &kp N3     &to 2
+                //│  to 4    │  trans   │  trans   │  trans   │   DOT    │   │    0     │    1     │    2     │    3     │   to 2   │
+                   &to 4     &trans     &trans     &trans     &kp DOT        &kp N0     &kp N1     &kp N2     &kp N3     &to 2
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                      &to 0      &kp LGUI     &hs RSHIFT &to 3
+                                                      &to 0      &sk LGUI     &sk RSHIFT &to 3
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -129,9 +121,9 @@
                   &kp A      &hm LCTL R   &hm LALT S  &hm LGUI T    &kp G       &kp M     &hm RGUI N &hm RALT E &hm RCTL I    &kp O
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >   :  │ /        │
-                 &hs LSHIFT Z  &kp X      &kp C      &kp D      &kp V           &kp K      &kp H    &kp COMMA &td DOT COLON  &kp FSLH
+                 &kp Z  &kp X      &kp C      &kp D      &kp V           &kp K      &kp H    &kp COMMA &td DOT COLON  &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                 &to 0  &mt LC(LS(LA(LGUI))) SPC  &trans    &to 1
+                                          &to 0  &mt LC(LS(LA(LGUI))) SPC     &sk RSHIFT   &to 3
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯                   
             >;
         };
@@ -157,10 +149,10 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│  MUTE    │  PAUSE   │  PREV    │          │          │   │   F1     │   F2     │   F3     │   F4     │  BT_1    │
-                  &kp C_MUTE &kp C_PAUSE &kp C_PREV &trans     &trans         &kp F1     &kp F2     &kp F3     &kp F4   &bt BT_SEL 
+                  &kp C_MUTE  &kp C_PAUSE  &kp C_PREV  &trans     &trans         &kp F1     &kp F2     &kp F3     &kp F4   &bt BT_SEL
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│ VOL UP   │  PLAY    │  NEXT    │          │          │   │   F5     │   F6     │   F7     │   F8     │  BT_2    │
-                  &kp C_VOL_UP &kp C_PLAY &kp C_NEXT &trans     &trans         &kp F5     &kp F6     &kp F7     &kp F8  &bt BT_NXT
+                  &kp C_VOL_UP  &kp C_PLAY  &kp C_NEXT  &trans     &trans         &kp F5     &kp F6     &kp F7     &kp F8  &bt BT_NXT
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│ VOL DOWN │          │          │          │          │   │   F9     │  F10     │  F11     │  F12     │  BT_3    │
                   &kp C_VOL_DN &trans     &trans     &trans     &trans         &kp F9     &kp F10    &kp F11    &kp F12   &bt BT_PRV
