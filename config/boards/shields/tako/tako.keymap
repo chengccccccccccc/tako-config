@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 #define NUM 1
 #define MAC 2
@@ -149,15 +148,15 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│  MUTE    │  PAUSE   │  PREV    │          │          │   │   F1     │   F2     │   F3     │   F4     │  BT_1    │
-                  &kp C_MUTE  &kp C_PAUSE  &kp C_PREV  &trans     &trans         &kp F1     &kp F2     &kp F3     &kp F4   &bt BT_SEL
+                  &kp C_MUTE  &kp C_PAUSE  &kp C_PREV  &trans     &trans         &kp F1     &kp F2     &kp F3     &kp F4   &trans
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│ VOL UP   │  PLAY    │  NEXT    │          │          │   │   F5     │   F6     │   F7     │   F8     │  BT_2    │
-                  &kp C_VOL_UP  &kp C_PLAY  &kp C_NEXT  &trans     &trans         &kp F5     &kp F6     &kp F7     &kp F8  &bt BT_NXT
+                  &kp C_VOL_UP  &kp C_PLAY  &kp C_NEXT  &trans     &trans         &kp F5     &kp F6     &kp F7     &kp F8  &trans
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│ VOL DOWN │          │          │          │          │   │   F9     │  F10     │  F11     │  F12     │  BT_3    │
-                  &kp C_VOL_DN &trans     &trans     &trans     &trans         &kp F9     &kp F10    &kp F11    &kp F12   &bt BT_PRV
+                  &kp C_VOL_DN &trans     &trans     &trans     &trans         &kp F9     &kp F10    &kp F11    &kp F12   &trans
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                    &trans    &bt BT_CLR_ALL  &kp F19        &to 1
+                                                    &trans    &trans         &kp F19        &to 1
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
