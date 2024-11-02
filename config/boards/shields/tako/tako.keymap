@@ -148,7 +148,7 @@
         fun_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│  flash   │  smoke   │  molotor │ decoy    │ Translate│   │   F1     │   F2     │   F3     │   F4     │ Bootloader│
+                //│  daoju   │  Tran1   │  Tran2   │ Tran3    │ ESC      │   │   F1     │   F2     │   F3     │   F4     │ Bootloader│
                   &kp T       &kp Z      &kp X     &kp C      &kp ESC      &kp F1     &kp F2     &kp F3     &kp F4   &bootloader
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│ LSHIFT   │  Q()     │  W ()    │    E ()  │ Reloading│   │   F5     │   F6     │   F7     │   F8     │  BT_NEXT │
@@ -157,7 +157,7 @@
                 //│ LCONTROL │   A      │    S     │     D    │    B     │   │   F9     │  F10     │  F11     │  F12     │BT_CLEAR_ALL│
                   &kp LCTL     &kp A      &kp S      &kp D        &kp B      &kp F9     &kp F10    &kp F11    &kp F12   &bt BT_CLR_ALL
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &kp ESC     &kp SPC       &kp F19       &to 1
+                                                   &to 0     &kp SPC       &kp F19       &to 1
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
