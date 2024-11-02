@@ -87,7 +87,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
                     &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                     &mt LC(LS(LA(LGUI))) SPC  &sk LSHIFT    &sk RCTL   &to 1
+                                     &mt LC(LS(LA(LGUI))) SPC  &sk LSHIFT    &kt RCTL   &to 1
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -95,16 +95,16 @@
         num_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│  trans   │  trans   │  trans   │  trans   │  EQUAL   │   │  UNDER   │    7     │    8     │    9     │   BSPC   │
-                  &trans     &trans     &trans     &trans     &kp EQUAL      &kp UNDER  &kp N7     &kp N8     &kp N9     &kp BSPC
+                //│  ESC     │ VOL_UP   │  MUTE    │ PAGE_UP  │  EQUAL   │   │  UNDER   │    7     │    8     │    9     │   BSPC   │
+                  &kp ESC   &kp C_VOL_UP  &kp C_MUTE  &kp PG_UP  &kp EQUAL     &kp UNDER  &kp N7     &kp N8     &kp N9     &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│  trans   │  trans   │  trans   │  trans   │  UNDER   │   │   DOT    │    4     │    5     │    6     │  ENTER   │
-                   &trans     &trans     &trans     &trans     &kp UNDER      &kp DOT    &kp N4     &kp N5     &kp N6     &kp ENTER
+                //│  TAB     │ VOL_DN   │ UP_ARROW │PAGE_DOWN │  UNDER   │   │   DOT    │    4     │    5     │    6     │  ENTER   │
+                &kp TAB   &kp C_VOL_DN  &kp UP_ARROW  &kp PG_DN  &kp UNDER      &kp DOT    &kp N4     &kp N5     &kp N6     &kp ENTER
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│  to 4    │  trans   │  trans   │  trans   │   DOT    │   │    0     │    1     │    2     │    3     │   to 2   │
-                   &to 4     &trans     &trans     &trans     &kp DOT        &kp N0     &kp N1     &kp N2     &kp N3     &to 2
+                //│  to 4    │LEFT_ARROW│DOWN_ARROW│RIGHT_ARR │   DOT    │   │    0     │    1     │    2     │    3     │   to 2   │
+                   &to 4      &kp LEFT   &kp DOWN    &kp RIGHT    &kp DOT        &kp N0     &kp N1     &kp N2     &kp N3     &to 2
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                      &to 0      &sk LGUI     &sk RSHIFT &to 3
+                                                      &to 0      &kt LGUI     &sk RSHIFT &to 3
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
