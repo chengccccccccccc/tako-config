@@ -104,7 +104,7 @@
                 //│  to 4    │LEFT_ARROW│DOWN_ARROW│RIGHT_ARR │   DOT    │   │    0     │    1     │    2     │    3     │   to 2   │
                    &to 4      &kp LEFT   &kp DOWN    &kp RIGHT    &kp DOT        &kp N0     &kp N1     &kp N2     &kp N3     &to 2
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                      &to 0      &kp LEFT_GUI   &kp RIGHT_SHIFT  &to 3
+                                                      &to 0      &none       &none  &to 3
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -123,7 +123,7 @@
                 //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >   :  │ /        │
                  &kp Z  &kp X      &kp C      &kp D      &kp V           &kp K      &kp H    &kp COMMA &td DOT COLON  &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &to 0  &mt LC(LS(LA(LGUI))) SPC     &kp RIGHT_SHIFT   &to 3
+                                          &to 0  &mt LC(LS(LA(LGUI))) SPC     &sk RSHIFT  &to 3
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯                   
             >;
         };
