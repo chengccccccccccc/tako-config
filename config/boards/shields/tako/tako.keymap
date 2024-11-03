@@ -96,15 +96,15 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│  ESC     │ VOL_UP   │  MUTE    │ PAGE_UP  │  EQUAL   │   │  UNDER   │    7     │    8     │    9     │   BSPC   │
-                  &kp ESC   &kp C_VOL_UP  &kp C_MUTE  &kp PG_UP  &kp EQUAL     &kp UNDER  &kp N7     &kp N8     &kp N9     &kp BSPC
+                  &kp ESC   &kp C_VOL_UP  &kp C_MUTE  &kp PG_UP  &kp EQUAL     &kp UNDER  &kp N7     &kp N8     &kp N9    &kp GRAVE
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  TAB     │ VOL_DN   │ UP_ARROW │PAGE_DOWN │  UNDER   │   │   DOT    │    4     │    5     │    6     │  ENTER   │
-                &kp TAB   &kp C_VOL_DN  &kp UP_ARROW  &kp PG_DN  &kp UNDER      &kp DOT    &kp N4     &kp N5     &kp N6     &kp ENTER
+                &kp TAB   &kp C_VOL_DN  &kp UP_ARROW  &kp PG_DN  &kp UNDER      &kp DOT    &kp N4     &kp N5     &kp N6    &kp BSPC 
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│  to 4    │LEFT_ARROW│DOWN_ARROW│RIGHT_ARR │   DOT    │   │    0     │    1     │    2     │    3     │   to 2   │
-                   &to 4      &kp LEFT   &kp DOWN    &kp RIGHT    &kp DOT        &kp N0     &kp N1     &kp N2     &kp N3     &to 2
+                //│  to 2    │LEFT_ARROW│DOWN_ARROW│RIGHT_ARR │   DOT    │   │    0     │    1     │    2     │    3     │   to 2   │
+                   &to 2      &kp LEFT   &kp DOWN    &kp RIGHT    &kp DOT        &kp N0     &kp N1     &kp N2     &kp N3     &kp ENTER
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                      &to 0      &none       &none  &to 3
+                                                      &to 0      &none       &none         &to 3
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -118,12 +118,12 @@
                   &mt Q TAB    &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y    &kp BKSP
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
-                  &kp A      &hm LCTL R   &hm LALT S  &hm LGUI T    &kp G       &kp M     &hm RGUI N &hm RALT E &hm RCTL I    &kp O
+                  &kp A      &hm LCTL R   &hm LALT S  &hm LGUI T    &kp G       &kp M     &hm RGUI N &hm RALT E &hm RCTL I    &mt O ENTER
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >   :  │ /        │
                  &kp Z  &kp X      &kp C      &kp D      &kp V           &kp K      &kp H    &kp COMMA &td DOT COLON  &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                          &to 0  &mt LC(LS(LA(LGUI))) SPC     &sk RSHIFT  &to 3
+                                          &to 0  &mt LC(LS(LA(LGUI))) SPC     &sk RSHIFT  &to 1
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯                   
             >;
         };
@@ -137,10 +137,10 @@
                 //│  TAB   │  ' "     │  [ ]     │  { }     │  ( )     │   │  / \     │  _ -     │  + =     │  ` ~     │  ENTER   │
                   &kp TAB &td SQT DQT &td LBKT RBKT &td LBRC RBRC &td LPAR RPAR &td FSLH BSLH &td UNDER MINUS &td PLUS EQUAL &td GRAVE TILDE &kp ENTER
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    ,     │   .      │    ?     │    !     │    (     │   │     )    │    :     │    ;     │   "      │   to 3   │
-                  &kp COMMA  &kp DOT    &kp QMARK   &kp EXCL  &kp LPAR      &kp RPAR   &kp COLON    &kp SEMI    &kp DQT     &to 3
+                //│    ,     │   .      │    ?     │    !     │    (     │   │     )    │    :     │    ;     │   "      │   to 2│
+                  &kp COMMA  &kp DOT    &kp QMARK   &kp EXCL  &kp LPAR      &kp RPAR   &kp COLON    &kp SEMI    &kp DQT     &to 2
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                    &to 0      &trans          &kp SPC    &to 1
+                                                    &to 0      &none          &kp SPC    &to 4
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
